@@ -7,7 +7,6 @@ $iv1-ad--buttons-large: 800px;
 	position: relative;
 
 	&__content {
-		font-size: 5em;
 		max-height: 80vh;
 		width: 100%;
 		height: 100%;
@@ -26,6 +25,43 @@ $iv1-ad--buttons-large: 800px;
 		font-size: 2em;
 		font-size: 15vw;
 		font-size: 20vmin;
+	}
+
+	&__close {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		color: rgba(255,255,255, 0.85);
+		text-shadow: 1px 1px rgba(0,0,0, 0.5);
+		cursor: pointer;
+		font-size: 2.5em;
+	}
+
+	&__video {
+		opacity: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: black;
+		transition: opacity 1s ease;
+		z-index: -1;
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&--is-open {
+		.iv1-ad__video {
+			opacity: 1;
+			// this will be above the buttons
+			z-index: 10;
+		}
 	}
 
 	&__buttons {
