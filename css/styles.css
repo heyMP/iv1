@@ -11107,20 +11107,18 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 /**
  * Typography
  */
+body {
+  font-family: 'Roboto', sans-serif; }
+
 /**
  * Grids
  */
 .container {
-  max-width: 50em;
+  max-width: 75em;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2.85714%;
-  padding-right: 2.85714%;
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25) 66.66667%, transparent 66.66667%), linear-gradient(to bottom, #000 1px, transparent 1px);
-  background-size: 8.57143%, 100% 1.8em;
-  background-origin: content-box, border-box;
-  background-clip: content-box, border-box;
-  background-position: left top; }
+  padding-right: 2.85714%; }
   .container:before, .container:after {
     content: " ";
     display: table; }
@@ -11380,13 +11378,8 @@ category: Components - Slickheader
 .iv1-ad {
   display: block;
   overflow: hidden;
-  position: relative; }
-  .iv1-ad__content {
-    max-height: 80vh;
-    width: 100%;
-    height: 100%;
-    height: 47vw;
-    position: relative; }
+  position: relative;
+  border-bottom: 3px solid #3F51B5; }
   .iv1-ad__play {
     position: absolute;
     top: 50%;
@@ -11425,22 +11418,84 @@ category: Components - Slickheader
   .iv1-ad--is-open .iv1-ad__video {
     opacity: 1;
     z-index: 10; }
-  .iv1-ad__buttons {
-    background: black;
+  .iv1-ad__image {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%; }
+    .iv1-ad__image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      min-width: 50%;
+      min-height: 50%; }
+  @media (min-width: 500px) {
+    .iv1-ad__group .iv1-ad {
+      width: 50%;
+      float: left;
+      clear: none; } }
+  .iv1-ad__content__body {
+    font-size: 1.5rem;
+    font-size: 5vw;
+    font-size: 5vmin;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8), 1px 1px 1px rgba(0, 0, 0, 0.8);
+    max-width: 50rem; }
+  .iv1-ad--image {
+    background-size: cover; }
+    .iv1-ad--image:before {
+      content: '';
+      display: block;
+      padding-top: 50%; }
+    .iv1-ad--image .iv1-ad__buttons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      z-index: 10;
+      text-align: center;
+      padding: 0;
+      min-height: none;
+      height: auto; }
+    .iv1-ad--image .iv1-ad__content__body {
+      position: absolute;
+      color: white;
+      padding: 1em;
+      line-height: 100%;
+      bottom: 0; }
+  .iv1-ad--feature .iv1-ad__content {
+    max-height: 80vh;
+    width: 100%;
+    height: 100%;
+    height: 47vw;
+    position: relative; }
+    .iv1-ad--feature .iv1-ad__content__body {
+      font-size: 2rem;
+      font-size: 8vw;
+      font-size: 8vmin;
+      color: white;
+      padding: 1em;
+      line-height: 100%; }
+  .iv1-ad--feature .iv1-ad__buttons {
+    background: #3F51B5;
     padding: 1em; }
     @media (min-width: 500px) {
-      .iv1-ad__buttons {
-        background: rgba(0, 0, 0, 0.8);
+      .iv1-ad--feature .iv1-ad__buttons {
+        background: rgba(63, 81, 181, 0.8);
         position: absolute;
         bottom: 0;
         right: 0; } }
     @media (min-width: 650px) {
-      .iv1-ad__buttons {
+      .iv1-ad--feature .iv1-ad__buttons {
         width: auto; } }
     @media (min-width: 800px) {
-      .iv1-ad__buttons {
+      .iv1-ad--feature .iv1-ad__buttons {
         font-size: 1.5em; } }
-    .iv1-ad__buttons__prefix {
+    .iv1-ad--feature .iv1-ad__buttons__prefix {
       position: absolute;
       left: 0;
       top: 0;
@@ -11449,24 +11504,28 @@ category: Components - Slickheader
               transform: translateX(-100%);
       display: inline;
       background: transparent; }
-      .iv1-ad__buttons__prefix svg {
+      .iv1-ad--feature .iv1-ad__buttons__prefix svg {
         display: none;
         height: 100%;
-        fill: rgba(0, 0, 0, 0.8);
+        fill: rgba(63, 81, 181, 0.8);
         background: transparent; }
         @media (min-width: 500px) {
-          .iv1-ad__buttons__prefix svg {
+          .iv1-ad--feature .iv1-ad__buttons__prefix svg {
             display: inline; } }
-    .iv1-ad__buttons__item {
+    .iv1-ad--feature .iv1-ad__buttons__item {
       width: 100%;
       height: 2.7em;
       font-size: 1em;
-      line-height: 2.7em; }
+      line-height: 2.7em;
+      color: white; }
       @media (min-width: 500px) {
-        .iv1-ad__buttons__item {
+        .iv1-ad--feature .iv1-ad__buttons__item {
           width: auto; } }
-      .iv1-ad__buttons__item + .iv1-ad__buttons__item {
+      .iv1-ad--feature .iv1-ad__buttons__item + .iv1-ad--feature .iv1-ad__buttons__item {
         margin-top: .3em; }
         @media (min-width: 500px) {
-          .iv1-ad__buttons__item + .iv1-ad__buttons__item {
+          .iv1-ad--feature .iv1-ad__buttons__item + .iv1-ad--feature .iv1-ad__buttons__item {
             margin-top: 0; } }
+
+.iv1-card + .iv1-card {
+  margin-top: .75em; }

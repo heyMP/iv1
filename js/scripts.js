@@ -1,5 +1,6 @@
 var viewportUnitsRepaint = require('./viewportUnitsRepaint.js');
 var advertisement = require('./components/advertisement.js');
+var dialog = require('./components/dialog.js');
 
 (function ($) {
   'use strict';
@@ -62,25 +63,23 @@ var advertisement = require('./components/advertisement.js');
     });
   }
 
-  // Dialog
+  // image background
   if (typeof Drupal != 'undefined') {
-    Drupal.behaviors.dialog = {
+    Drupal.behaviors.imageBackground = {
       attach: function (context, settings) {
       }
     };
   }
   else {
     $(document).ready(function() {
-      var dialog = document.querySelector('dialog');
-      var showDialogButton = document.querySelector('#show-dialog');
-      if (! dialog.showModal) {
-       dialogPolyfill.registerDialog(dialog);
-      }
-      showDialogButton.addEventListener('click', function() {
-       dialog.showModal();
-      });
-      dialog.querySelector('.close').addEventListener('click', function() {
-       dialog.close();
+      $('*[data-image-bg]').each(function() {
+        var imageBackgroundSrc = $(this).find('img').attr('src');
+        $(this).find('img').attr('src', '');
+        $(this).css({
+          backgroundImage: "url(" + imageBackgroundSrc + ")",
+          backgroundSize: 'cover',
+          backgroundPosition: '50% 50%'
+        });
       });
     });
   }
