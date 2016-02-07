@@ -1,0 +1,40 @@
+.iv1-header {
+	&__logo {
+		margin: 5px 0;
+		margin-left: 20px;
+		height: 100%;
+		img {
+			height: 100%;
+			width: auto;
+			display: block;
+		}
+	}
+}
+
+.iv1-header__prefix {
+	padding: 1em 0;
+	height: 95px;
+
+	&__logo {
+		img {
+			height: 80px;
+			width: auto;
+		}
+	}
+}
+&__social-icons {
+	ul, li {
+		padding: 0;
+		margin: 0;
+		list-style: 0;
+	}
+	li {
+		display: inline-block;
+	}
+
+	.mdl-button--icon {
+		i {
+			vertical-align: middle;
+		}
+	}
+}

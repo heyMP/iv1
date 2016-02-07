@@ -1,0 +1,20 @@
+/**
+ * Grids
+ */
+
+$susy: (
+  columns: 12,
+  gutters: 1/2,
+  gutter-position: after,
+  global-box-sizing: border-box,
+  debug: (image: show),
+  output: float,
+  math: fluid,
+);
+
+.container,
+%container {
+  @include container;
+  @include pad(gutter());
+  @include show-grid();
+}

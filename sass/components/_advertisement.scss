@@ -1,0 +1,84 @@
+$iv1-ad--buttons-medium: 500px;
+$iv1-ad--buttons-large: 800px;
+
+.iv1-ad {
+	display: block;
+	overflow: hidden;
+	position: relative;
+
+	&__content {
+		font-size: 5em;
+		max-height: 80vh;
+		width: 100%;
+		height: 100%;
+		height: 47vw;
+		position: relative;
+	}
+
+	&__play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: rgba(255,255,255, 0.85);
+		text-shadow: 1px 1px rgba(0,0,0, 0.5);
+		cursor: pointer;
+		font-size: 2em;
+		font-size: 15vw;
+		font-size: 20vmin;
+	}
+
+	&__buttons {
+		background: black;
+		padding: 1em;
+		@include breakpoint($iv1-ad--buttons-medium) {
+			background: rgba(0,0,0, .80);
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		@include breakpoint($iv1-ad--buttons-medium + 150px) {
+			width: auto;
+		}
+		@include breakpoint($iv1-ad--buttons-large) {
+			font-size: 1.5em;
+		}
+
+		&__prefix {
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100%;
+			transform: translateX(-100%);
+			display: inline;
+			background: transparent;
+
+			svg {
+				display: none;
+				height: 100%;
+				fill: rgba(0,0,0, .80);
+				background: transparent;
+				@include breakpoint($iv1-ad--buttons-medium) {
+					display: inline;
+				}
+			}
+		}
+
+		&__item {
+			width: 100%;
+			height: 2.7em;
+			font-size: 1em;
+			line-height: 2.7em;
+			@include breakpoint($iv1-ad--buttons-medium) {
+				width: auto;
+			}
+
+			& + & {
+				margin-top: .3em;
+				@include breakpoint($iv1-ad--buttons-medium) {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}

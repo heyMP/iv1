@@ -1,0 +1,32 @@
+{
+  "name": "heyMP",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "borealis": "~1.0.1",
+    "eq.js": "~1.4.1",
+    "object-fit": "~0.4.1",
+    "svg4everybody": "~1.0.0",
+    "vide": "~0.5.0"
+  },
+  "devDependencies": {
+    "compass-breakpoint": "breakpoint-sass#~2.6.1",
+    "Cortana": "~1.2.7",
+    "north": "~0.2.0",
+    "susy": "~2.2.6"
+  },
+  "overrides": {
+    "jquery": {
+      "ignore": "true"
+    },
+    "svg4everybody": {
+      "main": "svg4everybody.min.js"
+    }
+  }
+}
