@@ -70,7 +70,6 @@ module.exports = function() {
   })(jQuery);
 };
 },{}],3:[function(require,module,exports){
-var viewportUnitsRepaint = require('./viewportUnitsRepaint.js');
 var advertisement = require('./components/advertisement.js');
 var dialog = require('./components/dialog.js');
 
@@ -82,20 +81,6 @@ var dialog = require('./components/dialog.js');
       fittype: 'cover', // either contain, cover, fill or none
       disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
   });
-
-  // MenuToggle
-  if (typeof Drupal != 'undefined') {
-    Drupal.behaviors.repaintSlickbanner = {
-      attach: function (context, settings) {
-        viewportUnitsRepaint($('.slickheader__title'));
-      }
-    };
-  }
-  else {
-    $(document).ready(function() {
-      viewportUnitsRepaint($('.slickheader__title'));
-    });
-  }
 
   // Vide video backgrounds
   if (typeof Drupal != 'undefined') {
@@ -167,13 +152,4 @@ var dialog = require('./components/dialog.js');
 
 })(jQuery);
 
-},{"./components/advertisement.js":1,"./components/dialog.js":2,"./viewportUnitsRepaint.js":4}],4:[function(require,module,exports){
-module.exports = function(target) {
-  'use strict';
-
-  $(window).resize(function () {
-    target.css('z-index', 1);
-  });
-};
-
-},{}]},{},[3]);
+},{"./components/advertisement.js":1,"./components/dialog.js":2}]},{},[3]);
