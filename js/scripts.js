@@ -67,6 +67,15 @@ var dialog = require('./components/dialog.js');
   if (typeof Drupal != 'undefined') {
     Drupal.behaviors.imageBackground = {
       attach: function (context, settings) {
+        $('*[data-image-bg]').each(function() {
+          var imageBackgroundSrc = $(this).find('img').attr('src');
+          $(this).find('img').attr('src', '');
+          $(this).css({
+            backgroundImage: "url(" + imageBackgroundSrc + ")",
+            backgroundSize: 'cover',
+            backgroundPosition: '50% 50%'
+          });
+        });
       }
     };
   }
