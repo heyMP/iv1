@@ -18,7 +18,7 @@ var dialog = require('./components/dialog.js');
         $('*[data-vide]').each(function() {
           // get the defined video name from the data-vide-src attribute
           var videSrc = $(this).data('vide-src');
-          $(this).vide('../video/' + videSrc);
+          $(this).vide(videSrc);
         });
       }
     };
