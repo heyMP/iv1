@@ -11162,6 +11162,9 @@ you are also setting the correct viewBox dimensions from your original svg.
     width: auto;
     display: block; }
 
+.iv1-header__container + * {
+  margin-top: 64px; }
+
 .iv1-header__prefix {
   padding: 1em 0;
   height: 95px; }

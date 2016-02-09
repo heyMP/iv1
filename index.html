@@ -12,37 +12,35 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="sass/material/mdlComponentHandler.js"></script>
     <script src="sass/material/button/button.js"></script>
-    <script src="sass/material/checkbox/checkbox.js"></script>
-    <script src="sass/material/icon-toggle/icon-toggle.js"></script>
-    <script src="sass/material/menu/menu.js"></script>
-    <script src="sass/material/progress/progress.js"></script>
-    <script src="sass/material/radio/radio.js"></script>
-    <script src="sass/material/slider/slider.js"></script>
-    <script src="sass/material/spinner/spinner.js"></script>
-    <script src="sass/material/switch/switch.js"></script>
-    <script src="sass/material/tabs/tabs.js"></script>
-    <script src="sass/material/textfield/textfield.js"></script>
-    <script src="sass/material/tooltip/tooltip.js"></script>
+    <!-- <script src="sass/material/checkbox/checkbox.js"></script>
+    // <script src="sass/material/icon-toggle/icon-toggle.js"></script>
+    // <script src="sass/material/progress/progress.js"></script>
+    // <script src="sass/material/radio/radio.js"></script>
+    // <script src="sass/material/slider/slider.js"></script>
+    // <script src="sass/material/spinner/spinner.js"></script>
+    // <script src="sass/material/switch/switch.js"></script>
+    // <script src="sass/material/tabs/tabs.js"></script>
+    // <script src="sass/material/textfield/textfield.js"></script>
+    // <script src="sass/material/tooltip/tooltip.js"></script>
+    // <script src="sass/material/data-table/data-table.js"></script> -->
     <script src="sass/material/layout/layout.js"></script>
-    <script src="sass/material/data-table/data-table.js"></script>
+    <script src="sass/material/menu/menu.js"></script>
     <script src="sass/material/ripple/ripple.js"></script>
     <script type="text/javascript" src="js/dist/third-party.js"></script>
     <script type="text/javascript" src="js/dist/bundle.js"></script>
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 
-    <div class="mdl-js-layout">
-
       <!-- Header -->
+      <div class="iv1-header__container mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button clearfix">
       <header class="mdl-layout__header mdl-layout__header--scroll iv1-header">
-        <img class="mdl-layout-icon"></img>
         <div class="mdl-layout__header-row">
           <div class="iv1-header__logo"><img src="images/logo.png" title="IWOM Outerwear"></div>
           <div class="mdl-layout-spacer"></div>
-          <nav class="mdl-navigation">
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
             <a class="mdl-navigation__link" href="#">Home</a>
             <a class="mdl-navigation__link" href="#">Shop Hunting Wear</a>
             <a class="mdl-navigation__link" href="#">Shop Stadium Wear</a>
@@ -62,12 +60,14 @@
           <a class="mdl-navigation__link" href="#">Are</a>
           <a class="mdl-navigation__link" href="#">You?</a>
         </nav>
-      </div><!-- header -->
+      </div>
+      </div>
+      <!-- header -->
 
       <!-- Banner -->
       <div class="iv1-banner clearfix">
         <div class="iv1-ad iv1-ad--video iv1-ad--feature">
-          <div class="iv1-ad__content" data-vide data-vide-src="iwom-ad">
+          <div class="iv1-ad__content" data-vide data-vide-src="video/iwom-ad">
             <div class="iv1-ad__content__body">The most advanced Hunting system on the market</div>
             <div class="iv1-ad__play"><i class="zmdi zmdi-play-circle"></i></div>
             <div class="iv1-ad__video">
@@ -162,7 +162,6 @@
         </div>
       </footer>
 
-    </div>
   </body>
 </html>
 
