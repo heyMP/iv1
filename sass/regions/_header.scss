@@ -1,4 +1,5 @@
 .iv1-header {
+	z-index: 10;
 	&__logo {
 		margin: 5px 0;
 		margin-left: 20px;
@@ -8,6 +9,15 @@
 			width: auto;
 			display: block;
 		}
+	}
+}
+
+.mdl-layout__container {
+	z-index: 100;
+	pointer-events: none;
+
+	* {
+		pointer-events: all;
 	}
 }
 

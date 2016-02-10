@@ -54,7 +54,8 @@ var dialog = require('./components/dialog.js');
       attach: function (context, settings) {
         $('*[data-image-bg]').each(function() {
           var imageBackgroundSrc = $(this).find('img').attr('src');
-          $(this).find('img').attr('src', '');
+          var backgroundPos = $(this).data('image-pos');
+          $(this).find('img').removeAttr('src');
           $(this).css({
             backgroundImage: "url(" + imageBackgroundSrc + ")",
             backgroundSize: 'cover',
@@ -68,12 +69,19 @@ var dialog = require('./components/dialog.js');
     $(document).ready(function() {
       $('*[data-image-bg]').each(function() {
         var imageBackgroundSrc = $(this).find('img').attr('src');
-        $(this).find('img').attr('src', '');
+        $(this).find('img').removeAttr('src');
         $(this).css({
           backgroundImage: "url(" + imageBackgroundSrc + ")",
           backgroundSize: 'cover',
-          backgroundPosition: '50% 50%'
         });
+
+        var backgroundPos = $(this).data('image-pos');
+        if (backgroundPos !== undefined) {
+          $(this).css('background-position', backgroundPos);
+        }
+        else {
+          $(this).css('background-position', '50% 50%');
+        }
       });
     });
   }

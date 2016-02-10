@@ -11153,14 +11153,22 @@ you are also setting the correct viewBox dimensions from your original svg.
   max-width: 100px;
   margin: auto; }
 
-.iv1-header__logo {
-  margin: 5px 0;
-  margin-left: 20px;
-  height: 100%; }
-  .iv1-header__logo img {
-    height: 100%;
-    width: auto;
-    display: block; }
+.iv1-header {
+  z-index: 10; }
+  .iv1-header__logo {
+    margin: 5px 0;
+    margin-left: 20px;
+    height: 100%; }
+    .iv1-header__logo img {
+      height: 100%;
+      width: auto;
+      display: block; }
+
+.mdl-layout__container {
+  z-index: 100;
+  pointer-events: none; }
+  .mdl-layout__container * {
+    pointer-events: all; }
 
 .iv1-header__container + * {
   margin-top: 64px; }
@@ -11182,6 +11190,12 @@ __social-icons li {
 
 __social-icons .mdl-button--icon i {
   vertical-align: middle; }
+
+.iv1-banner {
+  padding-top: 56px; }
+  @media (min-width: 1024px) {
+    .iv1-banner {
+      padding-top: 64px; } }
 
 /**
 *
@@ -11420,7 +11434,7 @@ category: Components - Slickheader
       height: 100%; }
   .iv1-ad--is-open .iv1-ad__video {
     opacity: 1;
-    z-index: 10; }
+    z-index: 1; }
   .iv1-ad__image {
     position: absolute;
     top: -50%;
@@ -11459,7 +11473,7 @@ category: Components - Slickheader
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
-      z-index: 10;
+      z-index: 1;
       text-align: center;
       padding: 0;
       min-height: none;
@@ -11500,7 +11514,7 @@ category: Components - Slickheader
         font-size: 1.5em; } }
     .iv1-ad--feature .iv1-ad__buttons__prefix {
       position: absolute;
-      left: 0;
+      right: 100%;
       top: 0;
       height: 100%;
       -webkit-transform: translateX(-100%);
@@ -11508,6 +11522,8 @@ category: Components - Slickheader
       display: inline;
       background: transparent; }
       .iv1-ad--feature .iv1-ad__buttons__prefix svg {
+        position: absolute;
+        right: 100%;
         display: none;
         height: 100%;
         fill: rgba(63, 81, 181, 0.8);

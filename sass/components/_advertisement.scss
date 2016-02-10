@@ -54,7 +54,7 @@ $iv1-ad--bg-color: #3F51B5;
 		.iv1-ad__video {
 			opacity: 1;
 			// this will be above the buttons
-			z-index: 10;
+			z-index: 1;
 		}
 	}
 
@@ -111,7 +111,7 @@ $iv1-ad--bg-color: #3F51B5;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			z-index: 10;
+			z-index: 1;
 			text-align: center;
 			padding: 0;
 			min-height: none;
@@ -164,7 +164,7 @@ $iv1-ad--bg-color: #3F51B5;
 
 			&__prefix {
 				position: absolute;
-				left: 0;
+				right: 100%;
 				top: 0;
 				height: 100%;
 				transform: translateX(-100%);
@@ -172,6 +172,8 @@ $iv1-ad--bg-color: #3F51B5;
 				background: transparent;
 
 				svg {
+					position: absolute;
+					right: 100%;
 					display: none;
 					height: 100%;
 					fill: rgba($iv1-ad--bg-color, .80);

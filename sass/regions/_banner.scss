@@ -1,3 +1,6 @@
 .iv1-banner {
-
+	padding-top: 56px;
+	@include breakpoint(1024px) {
+		padding-top: 64px;
+	}
 }
