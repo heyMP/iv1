@@ -2,9 +2,6 @@
 @import "../bower_components/susy/sass/susy";
 @import "../bower_components/compass-breakpoint/stylesheets/breakpoint";
 
-// Material
-@import "material/material-design-lite";
-
 // Core
 @import "core/resets";
 @import "core/misc";
@@ -14,9 +11,13 @@
 @import "core/grid";
 @import "core/svgs";
 
+// Material
+@import '../materialize/sass/materialize';
+
 // Layouts
 @import "regions/header";
 @import "regions/banner";
+@import "regions/footer";
 
 // Components
 @import "components/buttons";
